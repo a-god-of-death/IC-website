@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="main.js"></script>
+  <script src="lingqu.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="background.jpg" alt="Scenery 1">
+      <h2>Scenery 1</h2>
+      <p>$100</p>
+      <button class="button" id="claimButton" onclick="openModal()">Claim</button>
+      <button class= "button" onclick="goBack()">Back</button>
+
+      <script>
+      function goBack() {
+        window.history.back();
+      }
+      </script>
+      <script>
+        function openModal() {
+          alert("Congratulations! Claim successfully!");
+      }
+
+        </script>
+
+    </div>
+  </div>
+
+
+</body>
+</html>

@@ -1,35 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset = "UTF-8">
-    <title>A wishing website</title>
-    <link rel="stylesheet" href="styles.css">
+ <script src="index.js"></script>
+ <script src="login.js"></script>
+ <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+ <style>
+ body {
+ background-image: url('background1.jpg');
+ background-size: cover;
+ background-position: center;
+ font-family: 'Indie Flower', cursive;
+ font-size: 47px;
+ font-weight: bold;
+ line-height: 0.9;
+ }
+ .container {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh; /* This makes the container take up the full viewport height */
+ }
+ .text-container {
+ background: rgba(255, 255, 255, 0.5);
+ padding: 20px;
+ width: 50%;
+ position: relative;
+ z-index: 2;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin-top: 100px;
+ }
+ .emoji {
+ position: relative;
+ z-index: 2;
+ }
+ .buttons {
+ margin-top: 20px;
+ }
+ .button {
+ display: inline-block;
+ padding: 10px 20px;
+ margin-top: 20px;
+ background: linear-gradient(to right, #ff9966, #ff5e62);
+ color: white;
+ text-decoration: none;
+ border-radius: 5px;
+ box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+ transition: transform 0.3s ease-in-out;
+ }
+ .button:hover {
+ transform: scale(1.1);
+ }
+ .hidden {
+ display: none;
+}
+ .wallet {
+ position: fixed;
+ bottom: 20px;
+ right: 20px;
+ background-color: white;
+ padding: 10px;
+ border-radius: 5px;
+ font-size: 24px;
+ }
+ .introduction {
+    font-size: 23px;
+    letter-spacing: 2px;
+    line-height: 0.8px;
+ }
+ </style>
 </head>
 <body>
-    <header>
-        <h1>A wishing website</h1>
-        <p>This is a wish-making website where you can write down your wishes and hope they come true.</p>
-    </header>
-    <form id="wishForm">
-        <input type="text" id="nameInput" placeholder="Please enter your name">
-        <select id="wishType">
-            <option value="love">love</option>
-            <option value="health">health</option>
-            <option value="wealth">wealth</option>
-            <option value="work">work</option>
-            <option value="study">study</option>
-        </select>
-        <input type="text" id="wishInput" placeholder="Please enter your wish" maxlength="10">
-        <button type="submit">Make a wish</button>
-    </form>
-    <div id="wishWall"></div>
-    <script src="script.js"></script>
-    <section>
-        <h2>Our services</h2>
-        <p>We help you realize your wishes.</p>
-    </section>
-    <footer>
-        <p>Contact us：<a href="1015779089@qq.com">Nimo@InternetComputer.com</a></p>
-    </footer>
+ <div class="container">
+ <div class="text-container">
+ <p>Welcome to Santa!</p>
+ <p>Make a wish and help the world.</p>
+ <p class = "introduction">Go to economically disadvantaged places</p>
+ <p class = "introduction">and you will be rewarded</p>
+ <img class="emoji" src="https://www.emojiall.com/images/240/microsoft-teams/1f9d1-200d-1f384.png">
+ <div class="buttons">
+ <a href="https://identity.ic0.app/" class="button" id="loginButton">Register/Login</a>
+ <a class="button hidden" id="loggedInButton">Logged In</a>
+ <a href="tasks.html" class="button">Tasks</a>
+ </div>
+ </div>
+ </div>
+ <div class="wallet">
+ <p>Account Balance: $1000</p>
+ <p>Staked Tokens: 500</p>
+ </div>
 </body>
 </html>
